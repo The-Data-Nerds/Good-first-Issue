@@ -190,6 +190,7 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 - [Aditya Singh Rathore](https://github.com/Adez017)
 - [Adit](https://github.com/adityarathore17112002-rgb)
 - [Adithya S](https://github.com/Aditya-SRK)
+- [Rita Huang](https://github.com/yuhruh)
 
 
 

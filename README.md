@@ -9,7 +9,7 @@
 
 **Welcome to the most beginner-friendly open source project! 🎉**
 
-*This project exists for one reason: to help YOU make your first contribution.*
+_This project exists for one reason: to help YOU make your first contribution._
 
 [Detailed Guide](#-detailed-step-by-step-guide) • [Help](#-stuck-get-help) • [What's Next](#-whats-next)
 
@@ -22,6 +22,7 @@
 This is a **training ground** for aspiring open source contributors. By adding your name to our hall of contributors, you'll learn the entire GitHub workflow that powers millions of open source projects worldwide.
 
 ### What You'll Learn
+
 - ✅ How to fork a repository
 - ✅ How to clone code to your computer
 - ✅ How to create a branch
@@ -31,9 +32,11 @@ This is a **training ground** for aspiring open source contributors. By adding y
 - ✅ How to collaborate with other developers
 
 ### Why This Matters
+
 These skills are the **foundation of open source contribution**. Once you complete this, you'll be ready to contribute to any project on GitHub!
 
 ---
+
 ## 📚 Detailed Step-by-Step Guide
 
 ### Step 1️⃣: Fork This Repository
@@ -95,8 +98,9 @@ git checkout -b add-your-name
    ```markdown
    - [Aditya Singh Rathore](https://github.com/Adez017)
    ```
-   
+
 **Example:**
+
 ```markdown
 - [John Doe](https://github.com/johndoe)
 ```
@@ -104,6 +108,7 @@ git checkout -b add-your-name
 4. **Save the file** (Ctrl+S or Cmd+S)
 
 ⚠️ **Common Mistakes to Avoid:**
+
 - Don't forget the `-` at the start
 - Don't forget the square brackets `[]` around your name
 - Don't forget the parentheses `()` around your GitHub URL
@@ -116,12 +121,15 @@ git checkout -b add-your-name
 **What is a commit?** Saving your changes with a description of what you did.
 
 1. Check what you changed:
+
    ```bash
    git status
    ```
+
    You should see `README.md` listed in red.
 
 2. Stage your changes:
+
    ```bash
    git add README.md
    ```
@@ -159,8 +167,8 @@ Remember to use the branch name you created in Step 3!
 3. Add a title: `Add [Your Name] to contributors`
 4. Add a description (optional but nice):
    ```
-   Hi! This is my first contribution to open source. 
-   I've added my name to the contributors list. 
+   Hi! This is my first contribution to open source.
+   I've added my name to the contributors list.
    Thank you for this beginner-friendly project! 🎉
    ```
 5. Click **"Create pull request"**
@@ -176,6 +184,7 @@ You just made your **first open source contribution**! 🎊
 Your Pull Request will be reviewed and merged soon. Once merged, your name will appear in the contributors list on the main repository!
 
 ### What Happens Next?
+
 1. A maintainer will review your PR (usually within 24-48 hours)
 2. They might ask for small changes (don't worry, this is normal!)
 3. Once approved, your PR will be merged
@@ -191,11 +200,9 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 - [Adit](https://github.com/adityarathore17112002-rgb)
 - [Adithya S](https://github.com/Aditya-SRK)
 - [Rita Huang](https://github.com/yuhruh)
+- [Mudradi Pranavi](https://github.com/Pranavi-1125)
 
-
-
-
-*Your name will appear here once your PR is merged!*
+_Your name will appear here once your PR is merged!_
 
 ---
 
@@ -207,12 +214,14 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 <summary><b>❌ "Git is not recognized" or "command not found"</b></summary>
 
 **Solution:** Git isn't installed. Download it from [git-scm.com](https://git-scm.com/downloads) and restart your terminal.
+
 </details>
 
 <details>
 <summary><b>❌ "Permission denied" when pushing</b></summary>
 
 **Solution:** You might not have permission to push to the original repo. Make sure you:
+
 1. Forked the repository first
 2. Cloned YOUR fork, not the original repository
 3. The URL should contain YOUR username
@@ -221,7 +230,8 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 <details>
 <summary><b>❌ "Merge conflict" in Pull Request</b></summary>
 
-**Solution:** Someone else added their name in the same spot. Don't panic! 
+**Solution:** Someone else added their name in the same spot. Don't panic!
+
 1. Pull the latest changes: `git pull origin main`
 2. Fix the conflicts in README.md (remove the `<<<<`, `====`, `>>>>` markers)
 3. Add and commit: `git add README.md && git commit -m "Fix merge conflict"`
@@ -232,6 +242,7 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 <summary><b>❌ My terminal/command prompt doesn't work</b></summary>
 
 **Solutions:**
+
 - **Windows:** Use Git Bash (installed with Git) or PowerShell
 - **Mac:** Use Terminal (find it in Applications > Utilities)
 - **Linux:** Use your default terminal (Ctrl+Alt+T)
@@ -241,6 +252,7 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 <summary><b>❌ I made a mistake in my commit</b></summary>
 
 **Solution:** You can fix it!
+
 1. Make the correction in README.md
 2. Stage: `git add README.md`
 3. Amend the commit: `git commit --amend -m "Add [Your Name] to contributors list"`
@@ -281,6 +293,7 @@ Congratulations on your first contribution! Here's how to continue your journey:
 ### Contribute to Real Projects
 
 Now that you know the workflow, you can contribute to ANY project on GitHub! Look for:
+
 - Issues labeled `good first issue`
 - Issues labeled `beginner-friendly`
 - Issues labeled `help wanted`
@@ -290,16 +303,19 @@ Now that you know the workflow, you can contribute to ANY project on GitHub! Loo
 ## 📚 Learning Resources
 
 ### Git & GitHub
+
 - [Git Basics Video](https://www.youtube.com/watch?v=8JJ101D3knE) - 30 min crash course
 - [GitHub Docs](https://docs.github.com/en) - Official documentation
 - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf) - Quick reference
 
 ### Open Source
+
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
 - [Finding Ways to Contribute](https://opensource.guide/how-to-contribute/#finding-a-project-to-contribute-to)
 - [Open Source Friday](https://opensourcefriday.com/) - Join the community!
 
 ### Practice
+
 - [Git Branching Game](https://learngitbranching.js.org/) - Learn by doing
 - [GitHub Skills](https://skills.github.com/) - Interactive courses
 - [Exercism](https://exercism.org/) - Practice coding with mentorship
@@ -360,7 +376,7 @@ Join the conversation and connect with other contributors:
 
 **Made with ❤️ for beginners by beginners**
 
-*Remember: Every expert was once a beginner. You've got this!* 💪
+_Remember: Every expert was once a beginner. You've got this!_ 💪
 
 ⭐ **Star this repo** | 🔀 **Fork it** | 🤝 **Contribute**
 

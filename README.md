@@ -201,7 +201,7 @@ Your Pull Request will be reviewed and merged soon. Once merged, your name will 
 - [Adithya S](https://github.com/Aditya-SRK)
 - [Rita Huang](https://github.com/yuhruh)
 - [Mudradi Pranavi](https://github.com/Pranavi-1125)
-- [Janvee](https://github.com/Janvee31)
+- [Janvee] (https://github.com/Janvee31)
 
 _Your name will appear here once your PR is merged!_
 

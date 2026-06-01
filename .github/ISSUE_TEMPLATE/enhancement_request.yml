@@ -1,0 +1,32 @@
+name: Enhancement Request
+description: Suggest a feature or improvement
+title: "[ENHANCEMENT]: "
+labels:
+  - enhancement
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem would this enhancement solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your idea.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context

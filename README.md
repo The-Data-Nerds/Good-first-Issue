@@ -11,7 +11,7 @@
 
 _This project exists for one reason: to help YOU make your first contribution._
 
-[Detailed Guide](#-detailed-step-by-step-guide) • [Help](#-stuck-get-help) • [What's Next](#-whats-next)
+[Detailed Guide](#-detailed-step-by-step-guide) **|** [Help](#-stuck-get-help) **|** [What's Next](#-whats-next)
 
 </div>
 

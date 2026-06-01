@@ -82,7 +82,6 @@ That's it! Wait for your PR to be reviewed and merged.
 
 **Need more help?**
 → Check [README.md](README.md) for detailed step-by-step instructions
-→ See [FAQ.md](FAQ.md) for common questions
 → [Open an issue](../../issues) if you're still stuck
 
 ---
@@ -96,10 +95,10 @@ That's it! Wait for your PR to be reviewed and merged.
 
 ---
 
-## Beginner Tips 
+## Beginner Tips
 - Start with small contributions like fixing typos
-- Always read CONTRIBUTING.md befor making a PR
-- Keep ypur commits clear and simple
+- Always read CONTRIBUTING.md before making a PR
+- Keep your commits clear and simple
 
 ---
 

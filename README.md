@@ -289,7 +289,6 @@ Congratulations on your first contribution! Here's how to continue your journey:
 
 3. **Learn More About Git & GitHub**
    - [Git Handbook](https://guides.github.com/introduction/git-handbook/)
-   - [GitHub Learning Lab](https://lab.github.com/)
    - [Interactive Git Tutorial](https://learngitbranching.js.org/)
 
 ### Contribute to Real Projects

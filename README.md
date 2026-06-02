@@ -11,7 +11,7 @@
 
 _This project exists for one reason: to help YOU make your first contribution._
 
-[Detailed Guide](#-detailed-step-by-step-guide) **|** [Help](#-stuck-get-help) **|** [What's Next](#-whats-next)
+[Quick Start](QUICKSTART.md) **|** [Help](#-stuck-get-help) **|** [What's Next](#-whats-next)
 
 </div>
 
@@ -37,160 +37,28 @@ These skills are the **foundation of open source contribution**. Once you comple
 
 ---
 
-## 📚 Detailed Step-by-Step Guide
+## 🚀 Getting Started
 
-### Step 1️⃣: Fork This Repository
+Ready to make your first open-source contribution?
 
-**What is forking?** Creating your own copy of this project in your GitHub account.
+We have moved the complete onboarding tutorial into dedicated documentation:
 
-1. Click the **"Fork"** button at the top-right of this page
-2. Wait a few seconds while GitHub creates your copy
+- 📖 [QUICKSTART.md](QUICKSTART.md) – Complete beginner-friendly walkthrough
+- 🤝 [CONTRIBUTING.md](CONTRIBUTING.md) – Contribution guidelines and expectations
 
-![Fork Button Location](https://docs.github.com/assets/cb-40742/mw-1440/images/help/repository/fork-button.webp)
+The Quick Start guide covers:
 
-✅ **Success Check:** You should now be on `github.com/YOUR-USERNAME/Good-first-Issue`
+- Forking the repository
+- Cloning your fork
+- Creating a branch
+- Making changes
+- Committing and pushing
+- Creating a Pull Request
 
----
-
-### Step 2️⃣: Clone Your Fork
-
-**What is cloning?** Downloading the code to your computer so you can edit it.
-
-1. On **your forked repository**, click the green **"Code"** button
-2. Copy the URL (should look like: `https://github.com/YOUR-USERNAME/Good-first-Issue.git`)
-3. Open your terminal/command prompt
-4. Navigate to where you want to save the project (e.g., Desktop):
-   ```bash
-   cd Desktop
-   ```
-5. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/Good-first-Issue.git
-   ```
-6. Navigate into the project folder:
-   ```bash
-   cd Good-first-Issue
-   ```
-
-✅ **Success Check:** Run `ls` (Mac/Linux) or `dir` (Windows). You should see files like README.md
+Follow the guide and come back here once your contribution is merged!
 
 ---
 
-### Step 3️⃣: Create a New Branch
-
-**What is a branch?** A separate version of the code where you can make changes safely.
-
-```bash
-git checkout -b add-your-name
-```
-
-**Pro Tip:** Replace `your-name` with your actual name (e.g., `add-john-doe`)
-
-✅ **Success Check:** You should see: `Switched to a new branch 'add-your-name'`
-
----
-
-### Step 4️⃣: Add Your Name
-
-1. Open `README.md` in your text editor
-2. Scroll down to the **"👥 Contributors"** section
-3. Add your name following this **exact format**:
-   ```markdown
-   - [Aditya Singh Rathore](https://github.com/Adez017)
-   ```
-
-**Example:**
-
-```markdown
-- [John Doe](https://github.com/johndoe)
-```
-
-4. **Save the file** (Ctrl+S or Cmd+S)
-
-⚠️ **Common Mistakes to Avoid:**
-
-- Don't forget the `-` at the start
-- Don't forget the square brackets `[]` around your name
-- Don't forget the parentheses `()` around your GitHub URL
-- Make sure the URL is YOUR GitHub profile (replace YOUR-USERNAME)
-
----
-
-### Step 5️⃣: Commit Your Changes
-
-**What is a commit?** Saving your changes with a description of what you did.
-
-1. Check what you changed:
-
-   ```bash
-   git status
-   ```
-
-   You should see `README.md` listed in red.
-
-2. Stage your changes:
-
-   ```bash
-   git add README.md
-   ```
-
-3. Commit with a message:
-   ```bash
-   git commit -m "Add [Your Name] to contributors list"
-   ```
-   **Example:** `git commit -m "Add John Doe to contributors list"`
-
-✅ **Success Check:** You should see a message like `1 file changed, 1 insertion(+)`
-
----
-
-### Step 6️⃣: Push to GitHub
-
-**What is pushing?** Uploading your changes from your computer back to GitHub.
-
-```bash
-git push origin add-your-name
-```
-
-Remember to use the branch name you created in Step 3!
-
-✅ **Success Check:** You should see `Branch 'add-your-name' set up to track remote branch`
-
----
-
-### Step 7️⃣: Create a Pull Request
-
-**What is a Pull Request (PR)?** Asking the project maintainer to review and accept your changes.
-
-1. Go to your forked repository on GitHub (`github.com/YOUR-USERNAME/Good-first-Issue`)
-2. You should see a yellow banner saying **"Compare & pull request"** - click it!
-3. Add a title: `Add [Your Name] to contributors`
-4. Add a description (optional but nice):
-   ```
-   Hi! This is my first contribution to open source.
-   I've added my name to the contributors list.
-   Thank you for this beginner-friendly project! 🎉
-   ```
-5. Click **"Create pull request"**
-
-✅ **Success Check:** You should see your PR with a number (e.g., #42)
-
----
-
-## 🎉 Congratulations!
-
-You just made your **first open source contribution**! 🎊
-
-Your Pull Request will be reviewed and merged soon. Once merged, your name will appear in the contributors list on the main repository!
-
-### What Happens Next?
-
-1. A maintainer will review your PR (usually within 24-48 hours)
-2. They might ask for small changes (don't worry, this is normal!)
-3. Once approved, your PR will be merged
-4. Your name will officially appear on this project! 🌟
-
----
 
 ## 👥 Contributors
 

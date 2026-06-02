@@ -15,30 +15,23 @@ Before you begin, make sure you have:
 - Git installed on your computer
 - A text editor (VS Code, Sublime Text, Notepad++, etc.)
 
-### Making Your First Contribution
+## Making Your First Contribution
 
-The easiest way to contribute is by adding your name to the Contributors list in the README.md file. Follow these steps:
+If you are new to open source, please start with our detailed onboarding guide:
 
-1. **Fork the repository**: Click the "Fork" button at the top right of this repository
-2. **Clone your fork**: 
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/Good-first-Issue.git
-   ```
-3. **Create a branch**: 
-   ```bash
-   git checkout -b add-your-name
-   ```
-4. **Make your changes**: Add your name to the Contributors section in README.md
-5. **Commit your changes**: 
-   ```bash
-   git add README.md
-   git commit -m "Add [Your Name] to contributors"
-   ```
-6. **Push to GitHub**: 
-   ```bash
-   git push origin add-your-name
-   ```
-7. **Create a Pull Request**: Go to your repository on GitHub and click "Compare & pull request"
+➡️ [QUICKSTART.md](QUICKSTART.md)
+
+The guide includes:
+
+- Forking the repository
+- Cloning your fork
+- Creating a branch
+- Editing files
+- Creating commits
+- Pushing changes
+- Opening a Pull Request
+
+Once you complete the setup process, return here for contribution requirements and guidelines.
 
 ## Contribution Guidelines
 

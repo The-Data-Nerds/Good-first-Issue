@@ -1,0 +1,25 @@
+name: "Close Stale Issues and PRs"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 15
+          days-before-close: 7
+          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity in the last 30 days. It will be closed in 7 days if no further activity occurs. Thank you for your contributions!"
+          stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity in the last 30 days. It will be closed in 7 days if no further activity occurs. Thank you for your contributions!"
+          stale-issue-label: "stale"
+          stale-pr-label: "stale"
+          exempt-issue-labels: "pinned,security,confirmed"
+          exempt-pr-labels: "dependencies,security"

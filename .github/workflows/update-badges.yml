@@ -1,0 +1,265 @@
+# .github/workflows/update-badges.yml
+# Automatically updates contributor badges in README.md on PR merge
+# Badge tiers: 🥉 (1 PR), 🥈 (2-4 PRs), 🥇 (5+ PRs)
+
+name: Update Contributor Badges
+
+on:
+  pull_request_target:
+    types: [closed]
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+  pull-requests: read
+  issues: read
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  README_FILE: README.md
+
+jobs:
+  update-badges:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Validate event payload
+        id: validate
+        run: |
+          # Validate required event data exists
+          if [ -z "${{ github.event.pull_request.user.login }}" ]; then
+            echo "::error::Missing PR author in event payload"
+            exit 1
+          fi
+          if [ -z "${{ github.event.pull_request.number }}" ]; then
+            echo "::error::Missing PR number in event payload"
+            exit 1
+          fi
+          echo "validated=true" >> $GITHUB_OUTPUT
+      
+      - name: Get merged PR count for contributor
+        id: get_pr_count
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          
+          # Get the username of the PR author
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+          
+          # Validate author name (security check)
+          if ! echo "$AUTHOR" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9-]*$'; then
+            echo "::error::Invalid author name format: $AUTHOR"
+            exit 1
+          fi
+          
+          # Count merged PRs by this author across the repository
+          PR_COUNT=$(gh pr list \
+            --state merged \
+            --author "$AUTHOR" \
+            --limit 100 \
+            --json number \
+            --jq 'length' 2>/dev/null || echo "0")
+          
+          # Validate PR count is a number
+          if ! [[ "$PR_COUNT" =~ ^[0-9]+$ ]]; then
+            echo "::error::Invalid PR count returned: $PR_COUNT"
+            PR_COUNT=0
+          fi
+          
+          echo "pr_count=$PR_COUNT" >> $GITHUB_OUTPUT
+          
+          # Determine badge based on PR count
+          if [ "$PR_COUNT" -ge 5 ]; then
+            BADGE="🥇"
+          elif [ "$PR_COUNT" -ge 2 ]; then
+            BADGE="🥈"
+          else
+            BADGE="🥉"
+          fi
+          echo "badge=$BADGE" >> $GITHUB_OUTPUT
+          
+          echo "Author: $AUTHOR, PRs merged: $PR_COUNT, Badge: $BADGE"
+      
+      - name: Update README.md with badges
+        env:
+          AUTHOR: ${{ steps.get_pr_count.outputs.author }}
+          BADGE: ${{ steps.get_pr_count.outputs.badge }}
+          PR_COUNT: ${{ steps.get_pr_count.outputs.pr_count }}
+        run: |
+          set -euo pipefail
+          
+          # Validate inputs
+          if [ -z "$AUTHOR" ] || [ -z "$BADGE" ]; then
+            echo "::error::Missing required inputs: AUTHOR=$AUTHOR, BADGE=$BADGE"
+            exit 1
+          fi
+          
+          # Check if README exists
+          if [ ! -f "$README_FILE" ]; then
+            echo "::error::README.md not found at $README_FILE"
+            exit 1
+          fi
+          
+          # Check if README is writable
+          if [ ! -w "$README_FILE" ]; then
+            echo "::error::README.md is not writable"
+            exit 1
+          fi
+          
+          # Check if contributors section exists
+          if ! grep -q "^## Contributors" "$README_FILE"; then
+            echo "::error::No '## Contributors' section found in README.md"
+            exit 1
+          fi
+          
+          # Create temporary file with proper cleanup
+          TMP_FILE=$(mktemp)
+          trap 'rm -f "$TMP_FILE"' EXIT
+          
+          # Process the file line by line
+          IN_CONTRIBUTORS=false
+          UPDATED=false
+          LINE_NUM=0
+          
+          while IFS= read -r line; do
+            LINE_NUM=$((LINE_NUM + 1))
+            
+            # Detect start of contributors section
+            if echo "$line" | grep -q "^## Contributors"; then
+              IN_CONTRIBUTORS=true
+              echo "$line" >> "$TMP_FILE"
+              continue
+            fi
+            
+            # Detect end of contributors section (next heading)
+            if $IN_CONTRIBUTORS && echo "$line" | grep -q "^## "; then
+              IN_CONTRIBUTORS=false
+            fi
+              
+            # Update badge for the author if in contributors section
+            if $IN_CONTRIBUTORS && echo "$line" | grep -qi "github.com/$AUTHOR"; then
+              # Remove existing badge if present (any emoji badge)
+              CLEAN_LINE=$(echo "$line" | sed 's/ [🥇🥈🥉]//g')
+              # Remove any trailing whitespace
+              CLEAN_LINE=$(echo "$CLEAN_LINE" | sed 's/[[:space:]]*$//')
+              echo "$CLEAN_LINE $BADGE" >> "$TMP_FILE"
+              UPDATED=true
+              echo "Updated badge for $AUTHOR to $BADGE"
+            else
+              echo "$line" >> "$TMP_FILE"
+            fi
+          done < "$README_FILE"
+          
+          # If author wasn't found in contributors list, add them
+          if [ "$UPDATED" = false ]; then
+            echo "Adding new contributor $AUTHOR to the list"
+            
+            # Use awk to add contributor after the last existing contributor
+            awk -v author="$AUTHOR" -v badge="$BADGE" '
+              BEGIN { found=0; last_contrib=0 }
+              /^## Contributors/ { found=1; print; next }
+              found && /^## / { 
+                if (!last_contrib) {
+                  print "- [" author "](https://github.com/" author ") " badge
+                }
+                found=0; print; next 
+              }
+              found && /^- \[/ { 
+                last_contrib=1
+                print; next 
+              }
+              found && !/^- \[/ && last_contrib { 
+                print "- [" author "](https://github.com/" author ") " badge
+                last_contrib=0
+                print; next 
+              }
+              { print }
+            ' "$README_FILE" > "$TMP_FILE"
+          fi
+          
+          # Validate the output file is not empty
+          if [ ! -s "$TMP_FILE" ]; then
+            echo "::error::Generated file is empty"
+            exit 1
+          fi
+          
+          # Replace original with updated version
+          cp "$TMP_FILE" "$README_FILE"
+          
+          echo "README.md updated successfully"
+      
+      - name: Validate README.md
+        run: |
+          set -euo pipefail
+          
+          # Validate the updated README
+          if [ ! -f "$README_FILE" ]; then
+            echo "::error::README.md was deleted during update"
+            exit 1
+          fi
+          
+          # Check for basic markdown validity
+          if ! head -1 "$README_FILE" | grep -q "^#"; then
+            echo "::warning::README.md may not start with a heading"
+          fi
+          
+          # Verify contributors section still exists
+          if ! grep -q "^## Contributors" "$README_FILE"; then
+            echo "::error::Contributors section was removed during update"
+            exit 1
+          fi
+          
+          echo "README.md validation passed"
+      
+      - name: Commit and push changes
+        run: |
+          set -euo pipefail
+          
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add "$README_FILE"
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          # Check for large files
+          STAGED_SIZE=$(git diff --staged -- "$README_FILE" | wc -c)
+          if [ "$STAGED_SIZE" -gt 1048576 ]; then
+            echo "::error::README.md changes exceed 1MB limit"
+            exit 1
+          fi
+          
+          git commit -m "chore: update contributor badge for ${{ steps.get_pr_count.outputs.author }}"
+          
+          # Push with retry logic
+          MAX_RETRIES=3
+          RETRY_DELAY=5
+          for i in $(seq 1 $MAX_RETRIES); do
+            if git push; then
+              echo "Changes pushed successfully"
+              break
+            else
+              if [ $i -eq $MAX_RETRIES ]; then
+                echo "::error::Failed to push changes after $MAX_RETRIES attempts"
+                exit 1
+              fi
+              echo "Push attempt $i failed, retrying in ${RETRY_DELAY}s..."
+              sleep $RETRY_DELAY
+              git pull --rebase
+            fi
+          done

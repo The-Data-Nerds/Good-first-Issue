@@ -8,52 +8,61 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Validate contributor format
+        id: check_format
         run: |
           echo "Checking if contributor entry follows the correct format..."
           
           # Get the diff of README.md
           git diff origin/main HEAD -- README.md > diff.txt
+          cat diff.txt
           
           # Check if the addition follows the pattern: - [Name](https://github.com/username)
           if grep -q "^+.*\- \[.*\](https://github.com/.*)" diff.txt; then
             echo "✅ Format looks good!"
-            exit 0
+            echo "status=success" >> $GITHUB_OUTPUT
           else
-            echo "⚠️  Warning: Make sure your entry follows this format:"
-            echo "- [Your Name](https://github.com/YOUR-USERNAME)"
-            echo ""
-            echo "Example:"
-            echo "- [John Doe](https://github.com/johndoe)"
-            exit 0  # We don't want to fail the check, just warn
+            echo "❌ Error: Invalid contributor format!"
+            echo "status=failed" >> $GITHUB_OUTPUT
+            exit 1
           fi
 
-      - name: Comment on PR
-        if: failure()
-        uses: actions/github-script@v6
+      - name: Comment and Fail on Bad Format
+        if: failure() && steps:check_format.outputs.status == 'failed'
+        uses: actions/github-script@v7
         with:
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `⚠️ **Formatting Notice**
+              body: `⚠️ **Formatting Action Required**
               
-              Your contributor entry might not be in the correct format. Please make sure it looks like this:
+              Your contributor entry does not follow the repository standards. Please correct your Markdown structure:
               
               \`\`\`markdown
               - [Your Name](https://github.com/YOUR-USERNAME)
               \`\`\`
               
-              **Example:**
-              \`\`\`markdown
-              - [John Doe](https://github.com/johndoe)
-              \`\`\`
-              
-              Don't worry - a maintainer will help you fix this if needed! 😊`
+              *Please update your commit to resolve this check!* 🚀`
+            })
+
+      - name: Auto Add Label on Success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['verified-entry']
             })

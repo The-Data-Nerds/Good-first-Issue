@@ -24,7 +24,6 @@ jobs:
           script: |
             const fs = require('fs');
 
-            // Fetch all merged PRs
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -32,20 +31,13 @@ jobs:
               per_page: 100,
             });
 
-            const merged = pulls.filter(pr => pr.merged_at);
-
-            // Count merged PRs per contributor
             const counts = {};
-            for (const pr of merged) {
+            for (const pr of pulls.filter(p => p.merged_at)) {
               const login = pr.user.login;
               counts[login] = (counts[login] || 0) + 1;
             }
 
-            // Tier thresholds
-            const champions = [];
-            const regulars  = [];
-            const timers    = [];
-
+            const champions = [], regulars = [], timers = [];
             for (const [login, count] of Object.entries(counts)) {
               const row = `| [${login}](https://github.com/${login}) | ${count} |`;
               if (count >= 5)      champions.push(row);
@@ -53,49 +45,47 @@ jobs:
               else                 timers.push(row);
             }
 
-            const placeholder = (msg) =>
-              `| _${msg}_ | — |`;
+            const empty = (msg) => `| _${msg}_ | -- |`;
+            const section = (rows, msg) => rows.length ? rows.join('\n') : empty(msg);
 
-            const section = (rows, msg) =>
-              rows.length ? rows.join('\n') : placeholder(msg);
+            const lines = [
+              '# \uD83C\uDFC6 Contributors Hall of Fame',
+              '',
+              '> Auto-updated on every merged PR. Tiers based on total merged contributions.',
+              '',
+              '---',
+              '',
+              '## \uD83E\uDD47 Champions -- 5+ PRs',
+              '',
+              '| Contributor | PRs Merged |',
+              '|-------------|------------|',
+              section(champions, 'Be the first Champion!'),
+              '',
+              '---',
+              '',
+              '## \uD83E\uDD48 Regulars -- 2-4 PRs',
+              '',
+              '| Contributor | PRs Merged |',
+              '|-------------|------------|',
+              section(regulars, 'Keep contributing to unlock this tier!'),
+              '',
+              '---',
+              '',
+              '## \uD83E\uDD49 First Timers -- 1 PR',
+              '',
+              '| Contributor | PRs Merged |',
+              '|-------------|------------|',
+              section(timers, 'No first-timers yet -- be the first!'),
+              '',
+              '---',
+              '',
+              '> \uD83D\uDCA1 **How to move up:** Every merged PR counts. Keep contributing to climb the tiers!',
+              '>',
+              '> This file is automatically maintained by the [Badge Tier workflow](.github/workflows/badge-tier.yml).',
+            ];
 
-            const content = `# 🏆 Contributors Hall of Fame
-
-> Auto-updated on every merged PR · Tiers based on total merged contributions
-
----
-
-## 🥇 Champions — 5+ PRs
-
-| Contributor | PRs Merged |
-|-------------|------------|
-${section(champions, 'Be the first Champion!')}
-
----
-
-## 🥈 Regulars — 2–4 PRs
-
-| Contributor | PRs Merged |
-|-------------|------------|
-${section(regulars, 'Keep contributing to unlock this tier!')}
-
----
-
-## 🥉 First Timers — 1 PR
-
-| Contributor | PRs Merged |
-|-------------|------------|
-${section(timers, 'No first-timers yet — be the first!')}
-
----
-
-> 💡 **How to move up:** Every merged PR counts. Keep contributing to climb the tiers!
-> 
-> This file is automatically maintained by the [Badge Tier workflow](.github/workflows/badge-tier.yml).
-`;
-
-            fs.writeFileSync('CONTRIBUTORS.md', content);
-            console.log('✅ CONTRIBUTORS.md updated successfully');
+            fs.writeFileSync('CONTRIBUTORS.md', lines.join('\n') + '\n', 'utf8');
+            console.log('CONTRIBUTORS.md updated successfully');
 
       - name: Commit updated CONTRIBUTORS.md
         run: |

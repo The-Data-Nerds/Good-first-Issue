@@ -1,6 +1,3 @@
-### 📄 Complete `QUICKSTART.md` Code
-
-```markdown
 # ⚡ Quick Start - 5 Minute Version
 
 **Just want the commands?** Here they are. For detailed explanations, see the full step-by-step breakdown below.
@@ -309,21 +306,3 @@ You should see your PR with a number (e.g., `#42`).
 ---
 
 **Congratulations on your first contribution!** 🎉
-
----
-
-### 📝 What to replace in `README.md`:
-
-Open `README.md`, delete the old long detailed tutorial section, and add this elegant clean link right under your welcome text box:
-
-```markdown
----
-
-## 🚀 Getting Started
-
-Ready to make your very first open-source contribution? We have centralized all onboarding tutorials into a single, comprehensive workspace to keep our landing page clean and scannable!
-
-### 👉 [Click Here to Open the Full Interactive Quickstart Guide!](QUICKSTART.md) 👈
-
----
-

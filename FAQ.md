@@ -2,6 +2,12 @@
 
 Welcome to the FAQ! Here are answers to the most common questions new contributors ask when starting their open source journey.
 
+<div align="center">
+
+**[🏠 Home](README.md) | [⚡ Quick Start](QUICKSTART.md) | [🤝 Contributing](CONTRIBUTING.md) | [💬 FAQ](FAQ.md) | [📚 Resources](RESOURCES.md)**
+
+</div>
+
 ---
 
 ## Table of Contents

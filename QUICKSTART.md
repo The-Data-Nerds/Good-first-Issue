@@ -1,9 +1,12 @@
-### 📄 Complete `QUICKSTART.md` Code
-
-```markdown
 # ⚡ Quick Start - 5 Minute Version
 
 **Just want the commands?** Here they are. For detailed explanations, see the full step-by-step breakdown below.
+
+<div align="center">
+
+**[🏠 Home](README.md) | [⚡ Quick Start](QUICKSTART.md) | [🤝 Contributing](CONTRIBUTING.md) | [💬 FAQ](FAQ.md) | [📚 Resources](RESOURCES.md)**
+
+</div>
 
 ---
 
@@ -32,7 +35,7 @@ Click the **"Fork"** button at the top right of this repository page.
 ### 2. Clone Your Fork
 
 ```bash
-git clone [https://github.com/YOUR-USERNAME/Good-first-Issue.git](https://github.com/YOUR-USERNAME/Good-first-Issue.git)
+git clone https://github.com/YOUR-USERNAME/Good-first-Issue.git
 cd Good-first-Issue
 
 ```
@@ -125,7 +128,7 @@ Downloading the code to your computer so you can edit it.
 * Clone the repository:
 
 ```bash
-  git clone [https://github.com/YOUR-USERNAME/Good-first-Issue.git](https://github.com/YOUR-USERNAME/Good-first-Issue.git)
+  git clone https://github.com/YOUR-USERNAME/Good-first-Issue.git
 
 ```
 
@@ -288,14 +291,14 @@ You should see your PR with a number (e.g., `#42`).
 **Need more help?**
 → Check `README.md` for detailed step-by-step instructions
 → See `FAQ.md` for common questions
-→ [Open an issue](https://www.google.com/search?q=../../issues) if you're still stuck
+→ [Open an issue](../../issues) if you're still stuck
 
 ---
 
 ## 🎯 What's Next?
 
 * ⭐ Star this repository
-* 📖 Read [RESOURCES.md](https://www.google.com/search?q=RESOURCES.md) to continue learning
+* 📖 Read [RESOURCES.md](RESOURCES.md) to continue learning
 * 🔍 Find your next contribution on [goodfirstissue.dev](https://goodfirstissue.dev)
 * 🤝 Help review other people's PRs
 
@@ -309,21 +312,3 @@ You should see your PR with a number (e.g., `#42`).
 ---
 
 **Congratulations on your first contribution!** 🎉
-
----
-
-### 📝 What to replace in `README.md`:
-
-Open `README.md`, delete the old long detailed tutorial section, and add this elegant clean link right under your welcome text box:
-
-```markdown
----
-
-## 🚀 Getting Started
-
-Ready to make your very first open-source contribution? We have centralized all onboarding tutorials into a single, comprehensive workspace to keep our landing page clean and scannable!
-
-### 👉 [Click Here to Open the Full Interactive Quickstart Guide!](QUICKSTART.md) 👈
-
----
-

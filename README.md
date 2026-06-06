@@ -11,7 +11,7 @@
 
 _This project exists for one reason: to help YOU make your first contribution._
 
-[Quick Start](QUICKSTART.md) **|** [Help](#-stuck-get-help) **|** [What's Next](#-whats-next)
+**[🏠 Home](README.md) | [⚡ Quick Start](QUICKSTART.md) | [🤝 Contributing](CONTRIBUTING.md) | [💬 FAQ](FAQ.md) | [📚 Resources](RESOURCES.md)**
 
 </div>
 

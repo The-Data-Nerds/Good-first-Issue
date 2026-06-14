@@ -2,6 +2,12 @@
 
 Curated resources to help you continue your open source journey after your first contribution.
 
+<div align="center">
+
+**[🏠 Home](README.md) | [⚡ Quick Start](QUICKSTART.md) | [🤝 Contributing](CONTRIBUTING.md) | [💬 FAQ](FAQ.md) | [📚 Resources](RESOURCES.md)**
+
+</div>
+
 ---
 
 ## Table of Contents

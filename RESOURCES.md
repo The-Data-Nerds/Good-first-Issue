@@ -163,6 +163,8 @@ Curated resources to help you continue your open source journey after your first
 - [Markdown Guide](https://www.markdownguide.org/) - For better READMEs
 - [Semantic Versioning](https://semver.org/) - Version numbering conventions
 - [Keep a Changelog](https://keepachangelog.com/) - Maintaining project history
+- [Interactive Markdown Tutorial](https://www.markdowntutorial.com/) - Gamified Markdown Tutorial
+- [Getting Started with Markdown](https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/) - Markdown Basics
 
 ---
 

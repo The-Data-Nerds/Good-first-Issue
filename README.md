@@ -72,6 +72,7 @@ Follow the guide and come back here once your contribution is merged!
 | Contributor | PRs Merged |
 |-------------|------------|
 | [Vedant4102004](https://github.com/Vedant4102004) | 6 |
+| [dependabot[bot]](https://github.com/dependabot[bot]) | 5 |
 <!-- CHAMPIONS-END -->
 
 ### 🥈 Regulars — 2–4 PRs
@@ -79,7 +80,6 @@ Follow the guide and come back here once your contribution is merged!
 <!-- REGULARS-START -->
 | Contributor | PRs Merged |
 |-------------|------------|
-| [dependabot[bot]](https://github.com/dependabot[bot]) | 4 |
 | [Pranav-MSK](https://github.com/Pranav-MSK) | 3 |
 | [niy-ati](https://github.com/niy-ati) | 3 |
 | [MsParadox](https://github.com/MsParadox) | 2 |

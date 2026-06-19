@@ -55,6 +55,9 @@ Curated resources to help you continue your open source journey after your first
 - [GitHub Skills](https://skills.github.com/) - Modern interactive courses
 - [Visualizing Git](https://git-school.github.io/visualizing-git/) - See what Git commands do
 
+- [Git Simulator Online](https://webutility.io/git-simulator-online) - A web-based sandbox that shows how your repository tree scales and updates visually with every Git command.
+
+
 ---
 
 ## Open Source Contribution
@@ -77,6 +80,9 @@ Curated resources to help you continue your open source journey after your first
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) - The definitive guide
 - [Pull Request Best Practices](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) - Standardized reference
 - [Code Review Best Practices](https://google.github.io/eng-practices/review/) - Google's official documentation guide
+
+- [Giscus](https://giscus.app/) - A modern comment system built entirely on GitHub Discussions, showcasing clean integration with GitHub's robust ecosystem.
+
 
 ### 🎓 Case Studies & Stories
 
@@ -202,6 +208,9 @@ Curated resources to help you continue your open source journey after your first
 - [GitHub Desktop](https://desktop.github.com/) - GUI for Git (no command line needed)
 - [GitKraken](https://www.gitkraken.com/) - Visual Git client
 - [Sourcetree](https://www.sourcetreeapp.com/) - Free Git GUI
+
+- [Lazygit](https://lazygit.dev/) - A fast, terminal-based Git GUI designed for keyboard-driven workflows.
+
 
 **VS Code Extensions:**
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - Supercharge Git in VS Code

@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run Markdown Lint Check
-        uses: davidanson/markdownlint-cli2-action@v23
+        uses: davidanson/markdownlint-cli2-action@v24
         with:
           globs: |
             **/*.md

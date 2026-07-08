@@ -111,56 +111,7 @@ _Your name will appear here once your PR is merged!_
 
 ## 🆘 Stuck? Get Help!
 
-### Common Issues & Solutions
-
-<details>
-<summary><b>❌ "Git is not recognized" or "command not found"</b></summary>
-
-**Solution:** Git isn't installed. Download it from [git-scm.com](https://git-scm.com/downloads) and restart your terminal.
-
-</details>
-
-<details>
-<summary><b>❌ "Permission denied" when pushing</b></summary>
-
-**Solution:** You might not have permission to push to the original repo. Make sure you:
-
-1. Forked the repository first
-2. Cloned YOUR fork, not the original repository
-3. The URL should contain YOUR username
-</details>
-
-<details>
-<summary><b>❌ "Merge conflict" in Pull Request</b></summary>
-
-**Solution:** Someone else added their name in the same spot. Don't panic!
-
-1. Pull the latest changes: `git pull origin main`
-2. Fix the conflicts in README.md (remove the `<<<<`, `====`, `>>>>` markers)
-3. Add and commit: `git add README.md && git commit -m "Fix merge conflict"`
-4. Push again: `git push origin add-your-name`
-</details>
-
-<details>
-<summary><b>❌ My terminal/command prompt doesn't work</b></summary>
-
-**Solutions:**
-
-- **Windows:** Use Git Bash (installed with Git) or PowerShell
-- **Mac:** Use Terminal (find it in Applications > Utilities)
-- **Linux:** Use your default terminal (Ctrl+Alt+T)
-</details>
-
-<details>
-<summary><b>❌ I made a mistake in my commit</b></summary>
-
-**Solution:** You can fix it!
-
-1. Make the correction in README.md
-2. Stage: `git add README.md`
-3. Amend the commit: `git commit --amend -m "Add [Your Name] to contributors list"`
-4. Force push: `git push -f origin add-your-name`
-</details>
+Ran into "Git not recognized", "Permission denied" when pushing, a merge conflict, a terminal issue, or a bad commit? All of that is covered in **[QUICKSTART.md → 🆘 Stuck?](QUICKSTART.md#-stuck)** — the canonical troubleshooting guide for this project.
 
 ### Still Need Help?
 

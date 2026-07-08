@@ -17,6 +17,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check for Duplicated Onboarding Instructions
+        run: bash .github/scripts/check-doc-drift.sh
+
       - name: Run Markdown Lint Check
         uses: davidanson/markdownlint-cli2-action@v23
         with:

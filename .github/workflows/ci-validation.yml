@@ -21,7 +21,7 @@ jobs:
         run: bash .github/scripts/check-doc-drift.sh
 
       - name: Run Markdown Lint Check
-        uses: davidanson/markdownlint-cli2-action@v23
+        uses: davidanson/markdownlint-cli2-action@v24
         with:
           globs: |
             **/*.md

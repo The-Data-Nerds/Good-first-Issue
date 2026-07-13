@@ -8,8 +8,8 @@
 
 | Contributor | PRs Merged |
 |-------------|------------|
+| [dependabot[bot]](https://github.com/dependabot[bot]) | 6 |
 | [Vedant4102004](https://github.com/Vedant4102004) | 6 |
-| [dependabot[bot]](https://github.com/dependabot[bot]) | 5 |
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Contributor | PRs Merged |
 |-------------|------------|
+| [tri-pti](https://github.com/tri-pti) | 1 |
 | [jhnavi25](https://github.com/jhnavi25) | 1 |
 | [ParthBhuptani](https://github.com/ParthBhuptani) | 1 |
 | [Janvee31](https://github.com/Janvee31) | 1 |

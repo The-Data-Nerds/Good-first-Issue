@@ -71,7 +71,7 @@ Follow the guide and come back here once your contribution is merged!
 <!-- CHAMPIONS-START -->
 | Contributor | PRs Merged |
 |-------------|------------|
-| [dependabot[bot]](https://github.com/dependabot[bot]) | 6 |
+| [dependabot[bot]](https://github.com/dependabot[bot]) | 7 |
 | [Vedant4102004](https://github.com/Vedant4102004) | 6 |
 <!-- CHAMPIONS-END -->
 

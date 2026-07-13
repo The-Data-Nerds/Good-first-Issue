@@ -8,7 +8,7 @@
 
 | Contributor | PRs Merged |
 |-------------|------------|
-| [dependabot[bot]](https://github.com/dependabot[bot]) | 6 |
+| [dependabot[bot]](https://github.com/dependabot[bot]) | 7 |
 | [Vedant4102004](https://github.com/Vedant4102004) | 6 |
 
 ---

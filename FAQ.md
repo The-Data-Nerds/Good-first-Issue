@@ -51,30 +51,7 @@ If other people merge their Pull Requests while you are working, your fork can f
 ### ❓ I got a "Merge Conflict" in my Pull Request. What should I do?
 A merge conflict happens when two people edit the same line of the same file, and Git doesn't know which version to keep. Don't worry, it's very easy to fix!
 
-1. Make sure your local repository is updated (see the sync steps above).
-2. Checkout your working branch:
-   ```bash
-   git checkout add-your-name
-   ```
-3. Merge the updated main branch into your working branch:
-   ```bash
-   git merge main
-   ```
-4. Open the conflicting file (`README.md` or `QUICKSTART.md`) in your text editor. Look for conflict markers:
-   ```markdown
-   <<<<<<< HEAD
-   - [Your Name](https://github.com/YOUR-USERNAME)
-   =======
-   - [Someone Else](https://github.com/someone-else)
-   >>>>>>> main
-   ```
-5. Edit the file to keep **both** names (make sure to delete the `<<<<<<<`, `=======`, and `>>>>>>>` markers).
-6. Save the file, add, commit, and push:
-   ```bash
-   git add README.md
-   git commit -m "Fix merge conflict"
-   git push origin add-your-name
-   ```
+See **[QUICKSTART.md → 🆘 Stuck?](QUICKSTART.md#-stuck)** for the full step-by-step walkthrough.
 
 ---
 

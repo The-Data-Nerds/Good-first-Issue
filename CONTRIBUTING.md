@@ -66,6 +66,19 @@ Write clear and descriptive commit messages:
 - ❌ Avoid: "Update"
 - ❌ Avoid: "Changes"
 
+## 📑 Documentation Structure
+
+To avoid conflicting onboarding instructions across files, each doc has a defined scope:
+
+| Document | Purpose | Owns |
+|----------|---------|------|
+| [QUICKSTART.md](QUICKSTART.md) | **Canonical onboarding guide** | All fork/clone/branch/commit/push/PR steps and their troubleshooting |
+| [README.md](README.md) | Project landing page | Project overview, contributor list, high-level links |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution policy | PR requirements, commit conventions, code of conduct, this table |
+| [FAQ.md](FAQ.md) | Extended Q&A | Questions outside the core workflow — any workflow-step question links to QUICKSTART.md instead of repeating steps |
+
+**Rule of thumb:** if you're changing how someone forks, clones, branches, commits, pushes, or opens a PR, edit `QUICKSTART.md` only. Other docs should link to it, not restate it.
+
 ## Code of Conduct
 
 ### Our Standards

@@ -10,6 +10,10 @@
 
 ---
 
+> 📌 **This is the canonical onboarding guide.** All fork → clone → branch → commit → push → PR steps and their troubleshooting live here. Other docs (README, CONTRIBUTING, FAQ) link to this file instead of repeating the steps — please keep it that way when editing docs. See [CONTRIBUTING.md → Documentation Structure](CONTRIBUTING.md#-documentation-structure) for the full ownership breakdown.
+
+---
+
 ## Prerequisites ✅
 
 - [ ] [GitHub account](https://github.com/signup)
@@ -288,8 +292,21 @@ You should see your PR with a number (e.g., `#42`).
 * Add and commit: `git add README.md && git commit -m "Fix merge conflict"`
 * Push again: `git push origin add-your-name`
 
+**My terminal/command prompt doesn't work**
+→ **Windows:** Use Git Bash (installed with Git) or PowerShell
+→ **Mac:** Use Terminal (find it in Applications > Utilities)
+→ **Linux:** Use your default terminal (Ctrl+Alt+T)
+
+**I made a mistake in my commit**
+→ Make the correction, then:
+
+```bash
+git add README.md
+git commit --amend -m "Add [Your Name] to contributors list"
+git push -f origin add-your-name
+```
+
 **Need more help?**
-→ Check `README.md` for detailed step-by-step instructions
 → See `FAQ.md` for common questions
 → [Open an issue](../../issues) if you're still stuck
 

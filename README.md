@@ -63,7 +63,7 @@ Follow the guide and come back here once your contribution is merged!
 ## 👥 Contributors
 
 **These amazing people have completed their first contribution!** 🎯
-
+[fdefoldedspace](https://github.com/fdefoldedspace)
 > Auto-updated on every merged PR via GitHub Actions
 
 ### 🥇 Champions — 5+ PRs

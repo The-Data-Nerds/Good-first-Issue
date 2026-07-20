@@ -66,6 +66,8 @@ Follow the guide and come back here once your contribution is merged!
 
 > Auto-updated on every merged PR via GitHub Actions
 
+- [muthurajkumar](https://github.com/muthurajkumar-y)
+
 ### 🥇 Champions — 5+ PRs
 
 <!-- CHAMPIONS-START -->

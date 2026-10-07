@@ -55,7 +55,8 @@ The Quick Start guide covers:
 - Committing and pushing
 - Creating a Pull Request
 
-Follow the guide and come back here once your contribution is merged!
+Follow the guide to make your first contribution. Once your Pull Request
+is reviewed and merged, your name will be added to the contributors list!
 
 ---
 

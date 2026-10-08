@@ -29,6 +29,7 @@ This is a **training ground** for aspiring open source contributors. By adding y
 - ✅ How to make changes and commit them
 - ✅ How to push code to GitHub
 - ✅ How to create a Pull Request (PR)
+- ✅ How to respond to review feedback
 - ✅ How to collaborate with other developers
 
 ### Why This Matters

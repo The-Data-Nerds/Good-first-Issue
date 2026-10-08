@@ -74,6 +74,7 @@ Curated resources to help you continue your open source journey after your first
 - [First Contributions](https://firstcontributions.github.io/) - Similar to our project
 - [Up For Grabs](https://up-for-grabs.net/) - Projects actively seeking contributors
 - [CodeTriage](https://www.codetriage.com/) - Subscribe to issues from your favorite projects
+- [GitHub Skills - First Contributions](https://github.com/skills/first-interaction) - Learn the basics of making your first contribution through an interactive GitHub course - Beginner, Interactive
 
 ### 📝 Best Practices
 

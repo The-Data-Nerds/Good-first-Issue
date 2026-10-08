@@ -39,6 +39,7 @@
 | [meghapise07](https://github.com/meghapise07) | 1 |
 | [adityarathore17112002-rgb](https://github.com/adityarathore17112002-rgb) | 1 |
 | [Copilot](https://github.com/Copilot) | 1 |
+| [Shamanth_R](https://github.com/shamanthramin)| 1 |
 
 ---
 

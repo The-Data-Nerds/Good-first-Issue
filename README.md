@@ -138,7 +138,7 @@ Congratulations on your first contribution! Here's how to continue your journey:
 2. **Explore More Beginner-Friendly Projects**
    - [First Contributions](https://github.com/firstcontributions/first-contributions)
    - [Awesome for Beginners](https://github.com/MunGell/awesome-for-beginners)
-   - Search GitHub for `label:"good first issue"`
+   - Search GitHub for `label: "good first issue"`
 
 3. **Learn More About Git & GitHub**
    - [Git Handbook](https://guides.github.com/introduction/git-handbook/)

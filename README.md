@@ -101,6 +101,7 @@ Follow the guide and come back here once your contribution is merged!
 | [yuhruh](https://github.com/yuhruh) | 1 |
 | [meghapise07](https://github.com/meghapise07) | 1 |
 | [adityarathore17112002-rgb](https://github.com/adityarathore17112002-rgb) | 1 |
+| [Amina Khan](https://github.com/Amina25-lupus) | 1 |
 | [Copilot](https://github.com/Copilot) | 1 |
 <!-- TIMERS-END -->
 

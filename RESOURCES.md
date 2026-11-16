@@ -57,7 +57,6 @@ Curated resources to help you continue your open source journey after your first
 
 - [Git Simulator Online](https://webutility.io/git-simulator-online) - A web-based sandbox that shows how your repository tree scales and updates visually with every Git command.
 
-
 ---
 
 ## Open Source Contribution
@@ -82,7 +81,6 @@ Curated resources to help you continue your open source journey after your first
 - [Code Review Best Practices](https://google.github.io/eng-practices/review/) - Google's official documentation guide
 
 - [Giscus](https://giscus.app/) - A modern comment system built entirely on GitHub Discussions, showcasing clean integration with GitHub's robust ecosystem.
-
 
 ### 🎓 Case Studies & Stories
 
@@ -175,124 +173,31 @@ Curated resources to help you continue your open source journey after your first
 - [Markdown Guide](https://www.markdownguide.org/) - For better READMEs
 - [Semantic Versioning](https://semver.org/) - Version numbering conventions
 - [Keep a Changelog](https://keepachangelog.com/) - Maintaining project history
-- [Interactive Markdown Tutorial](https://www.markdowntutorial.com/) - Gamified Markdown Tutorial
-- [Getting Started with Markdown](https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/) - Markdown Basics
+- [Hugging Face NLP Course](https://huggingface.co/learn/nlp-course) - Free course on NLP with Transformers for building real-world AI applications
 
 ---
 
-## 📖 Books (Free)
+## 🤝 Contributing to This Page
 
-- [Pro Git](https://git-scm.com/book/en/v2) - The definitive Git book
-- [Open Source Guides](https://opensource.guide/) - From GitHub (web-based)
-- [Think Like a Git Book](https://think-like-a-git.net/) - Online book version
+Found a great resource? Add it!
 
----
+1. Fork this repository
+2. Add your resource under the appropriate section
+3. Use the format: `- [Resource Name](URL) - Brief description`
+4. Submit a Pull Request
 
-## 🎥 YouTube Channels
-
-**General Programming & Open Source:**
-- [freeCodeCamp Channel](https://www.youtube.com/c/Freecodecamp) - Full courses
-- [Traversy Media](https://www.youtube.com/c/TraversyMedia) - Web development
-- [The Coding Train](https://www.youtube.com/c/TheCodingTrain) - Fun, creative coding
-- [Fireship](https://www.youtube.com/c/Fireship) - Quick tutorials and explanations
-
-**Git Specific:**
-- [Git & GitHub for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) - Very beginner-friendly
-- [Corey Schafer - Git](https://www.youtube.com/watch?v=HVsySz-h9r4) - In-depth tutorials
-
----
-
-## 🛠️ Tools & Extensions
-
-**Making Git Easier:**
-- [GitHub Desktop](https://desktop.github.com/) - GUI for Git (no command line needed)
-- [GitKraken](https://www.gitkraken.com/) - Visual Git client
-- [Sourcetree](https://www.sourcetreeapp.com/) - Free Git GUI
-
-- [Lazygit](https://lazygit.dev/) - A fast, terminal-based Git GUI designed for keyboard-driven workflows.
-
-
-**VS Code Extensions:**
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - Supercharge Git in VS Code
-- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) - Manage PRs from VS Code
-- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - Visualize your repo
-
----
-
-## 📊 Progress Tracking
-
-**Track Your Contributions:**
-- [Your GitHub Profile](https://github.com/YOUR-USERNAME) - Shows your contribution graph
-- [GitHub Star History](https://star-history.com/) - Repository metric tracker
-- [Open Source Agenda](https://www.opensourceagenda.com/) - Developer analytics index
-
-**Badges & Achievements:**
-- [Shields.io](https://shields.io/) - Create badges for your README
-- [Profile Badges Tutorial](https://github.com/alexandresanlim/Badges4-README.md-Profile) - Directory of formatting shortcuts
-
----
-
-## 🎯 Learning Paths
-
-### Path 1: Complete Beginner
-1. ✅ Complete this project (Good First Issue)
-2. Complete [First Contributions](https://github.com/firstcontributions/first-contributions)
-3. Take [GitHub Skills](https://skills.github.com/) courses
-4. Find a `good first issue` in a project you use
-5. Make your first "real" contribution!
-
-### Path 2: Already Know Basics
-1. ✅ Complete this project
-2. Read [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
-3. Find projects on [Good First Issue](https://goodfirstissue.dev/)
-4. Contribute to documentation (often easier than code)
-5. Tackle your first code contribution
-
-### Path 3: Want to Maintain Projects
-1. ✅ Complete this project
-2. Read [Open Source Guides - Best Practices](https://opensource.guide/best-practices/)
-3. Start a small project of your own
-4. Practice reviewing PRs (you can do this here!)
-5. Build a community around your project
-
----
-
-## 🎓 Courses & Tutorials
-
-**Free Courses:**
-- [Introduction to GitHub Skills](https://skills.github.com/) - Interactive learning courses
-- [Git & GitHub Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk) - freeCodeCamp
-- [Version Control with Git](https://www.coursera.org/learn/version-control-with-git) - Coursera (audit for free)
-
-**Paid Courses:**
-- [The Git & GitHub Bootcamp](https://www.udemy.com/course/git-and-github-bootcamp/) - Udemy
-- [Git Learning Paths](https://www.pluralsight.com/search?q=git) - Comprehensive learning tracks
-- [Advanced Git Guide](https://frontendmasters.com/courses/git-in-depth/) - Frontend Masters
-
----
-
-## 🤝 Contributing to This Resource List
-
-Found a great resource we missed? [Open an issue](../../issues) or submit a PR adding it!
-
-Please include:
-- **Link** - Working URL
-- **Description** - What it teaches and why it's helpful
-- **Level** - Beginner, Intermediate, or Advanced
-- **Format** - Video, Article, Interactive, etc.
-
----
-
-## ⚠️ Disclaimer
-
-These are community-recommended resources. We're not affiliated with any of them unless explicitly stated. Always verify that content is current and accurate.
+**Guidelines:**
+- Ensure the resource is free or has a free tier
+- Add resources under the most appropriate section
+- Keep descriptions brief (under 15 words)
+- Verify links are working
 
 ---
 
 <div align="center">
 
-**Keep learning and contributing!** 🚀
+**[← Back to Home](README.md)**
 
-The best way to learn is by doing. Pick a resource and start today!
+*Happy learning! 📖*
 
 </div>
